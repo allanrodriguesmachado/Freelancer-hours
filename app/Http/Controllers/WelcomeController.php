@@ -7,8 +7,8 @@ use Illuminate\View\View;
 
 class WelcomeController extends Controller
 {
-    public function __invoke(Request $request): View
+    public function __invoke(): View
     {
-        return view('livewire.test');
+        return view('welcome');
     }
 }
