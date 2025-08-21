@@ -3,5 +3,5 @@
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', WelcomeController::class);
-Route::get('/', fn() => view('projects.index',));
+Route::view('/','projects.index');
+Route::view('/project/{id}','projects.show')->name('project.show');

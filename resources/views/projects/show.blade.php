@@ -1,3 +1,4 @@
 <div>
-    <!-- When there is no desire, all things are at peace. - Laozi -->
+    @dd(request()->route('id'))
+    <livewire:projects.show />
 </div>
