@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\ProjectStatus;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -13,7 +14,9 @@ class Project extends Model
     public function casts(): array
     {
         return [
-            'tack_stack' => 'array'
+            'tack_stack' => 'array',
+            'status' => ProjectStatus::class,
+            'ends_at' => 'datetime'
         ];
     }
 }
