@@ -44,7 +44,7 @@
         <div class="uppercase font-bold text-[#8C8C9A] text-[12px]">Tecnologias</div>
         <div class="flex gap-[8px] items-center pb-2">
             @foreach($project->tack_stack as $tech)
-{{--                <x-ui.tech :icon="$tech->icon" :text="$tech->text"/>--}}
+                <x-ui.tech :icon="$tech" :text="$tech"/>
             @endforeach
         </div>
     </div>
@@ -53,17 +53,17 @@
         <div class="uppercase font-bold text-[#8C8C9A] text-[12px]">Publicado Por</div>
         <div class="flex gap-[8px] items-center">
             <div>
-{{--                <x-ui.avatar src="{{ $project->author->avatar }}"/>--}}
+                <x-ui.avatar src="{{ $project->author->avatar }}"/>
             </div>
 
             <div>
                 <div class="text-white text-[14px] font-bold tracking-wide">
-{{--                    {{ $project->author->name }}--}}
+                    {{ $project->author->name }}
                 </div>
                 <div class="flex items-center space-x-[4px]">
-{{--                    @foreach(range(1, $project->author->stars) as $star)--}}
-{{--                        <x-ui.icons.star class="h-[14px]"/>--}}
-{{--                    @endforeach--}}
+                    @foreach(range(1, $project->author->stars) as $star)
+                        <x-ui.icons.star class="h-[14px]"/>
+                    @endforeach
                 </div>
             </div>
         </div>
