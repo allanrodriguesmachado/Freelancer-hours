@@ -11,7 +11,7 @@ enum ProjectStatus: string
     public function label(): string {
         return match ($this) {
           self::Open => 'Aceitando Propostas',
-          self::Progress => 'Aceitando Propostas',
+          self::Progress => 'Em precesso',
           self::Closed => 'Fechado',
         };
     }
